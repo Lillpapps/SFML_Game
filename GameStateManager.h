@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_STATE_MANAGER_H
+#define GAME_STATE_MANAGER_H
 
 #include <vector>
 #include <string>
@@ -23,3 +24,5 @@ private:
 	GameState*				m_currentState;
 	GameState*				m_nextState;
 };
+
+#endif GAME_STATE_MANAGER_H

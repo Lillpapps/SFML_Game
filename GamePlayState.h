@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_PLAY_STATE_H
+#define GAME_PLAY_STATE_H
 
 #include "GameState.h"
 
@@ -18,3 +19,5 @@ private:
 	sf::Font		m_Font;
 	sf::String		m_String;
 };
+
+#endif GAME_PLAY_STATE_H

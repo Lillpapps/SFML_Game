@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_STATE_H
+#define GAME_STATE_H
 
 #include "GameStateManager.h"
 
@@ -23,3 +24,5 @@ private:
 	std::string m_name;
 
 };
+
+#endif GAME_STATE_H

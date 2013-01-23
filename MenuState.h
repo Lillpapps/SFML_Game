@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MENU_STATE_H
+#define MENU_STATE_H
 
 #include "GameState.h"
 
@@ -18,3 +19,5 @@ private:
 	sf::Font		m_Font;
 	sf::String		m_String;
 };
+
+#endif MENU_STATE_H

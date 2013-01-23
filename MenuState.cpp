@@ -1,5 +1,6 @@
 #include "MenuState.h"
 
+#pragma region Base
 MenuState::MenuState(GameStateManager* manager):
 GameState(manager, "MenuState")
 {
@@ -9,7 +10,9 @@ GameState(manager, "MenuState")
 MenuState::~MenuState()
 {
 }
+#pragma endregion
 
+#pragma region Publics
 void MenuState::Update(float delta)
 {
 	/*if ( is_keydown_first(SDLK_p) )
@@ -44,3 +47,4 @@ void MenuState::Exit()
 {
 	
 }
+#pragma endregion

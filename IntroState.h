@@ -1,4 +1,5 @@
-#pragma once
+#ifndef INTRO_STATE_H
+#define INTRO_STATE_H
 
 #include "GameState.h"
 
@@ -20,3 +21,5 @@ private:
 	float			m_introDuration;
 	float			m_introCurrentTime;
 };
+
+#endif INTRO_STATE_H

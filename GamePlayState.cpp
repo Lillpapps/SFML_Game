@@ -1,5 +1,6 @@
 #include "GamePlayState.h"
 
+#pragma region Base
 GamePlayState::GamePlayState(GameStateManager* manager):
 GameState(manager, "GamePlayState")
 {
@@ -8,7 +9,9 @@ GameState(manager, "GamePlayState")
 GamePlayState::~GamePlayState()
 {
 }
+#pragma endregion
 
+#pragma region Publics
 void GamePlayState::Update(float delta)
 {
 	/*if ( is_keydown_first(SDLK_ESCAPE) )
@@ -38,3 +41,4 @@ void GamePlayState::Exit()
 {
 	
 }
+#pragma endregion

@@ -1,6 +1,7 @@
 #include "GameStateManager.h"
 #include "GameState.h"
 
+#pragma region Base
 GameStateManager::GameStateManager()
 {
 	m_currentState = nullptr;
@@ -15,7 +16,9 @@ GameStateManager::~GameStateManager()
 		delete m_states[i];
 	}
 }
+#pragma endregion
 
+#pragma region Publics
 void GameStateManager::AddState(GameState* state)
 {
 	m_states.push_back(state);
@@ -53,3 +56,4 @@ void GameStateManager::Render(sf::RenderWindow* target)
 	if ( m_currentState )
 		m_currentState->Draw(target);
 }
+#pragma endregion

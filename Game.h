@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GAME_H
+#define GAME_H
+
 #include "IntroState.h"
 #include "MenuState.h"
 #include "GamePlayState.h"
@@ -19,3 +21,4 @@ void				CheckForEvents();
 
 };
 
+#endif GAME_H

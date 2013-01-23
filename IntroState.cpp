@@ -1,6 +1,6 @@
 #include "IntroState.h"
 
-
+#pragma region Base
 IntroState::IntroState(GameStateManager* manager):
 GameState(manager, "IntroState")
 {
@@ -11,7 +11,9 @@ GameState(manager, "IntroState")
 IntroState::~IntroState()
 {
 }
+#pragma endregion
 
+#pragma region Publics
 void IntroState::Update(float delta)
 {
 	m_introCurrentTime += delta;
@@ -46,6 +48,6 @@ void IntroState::Enter()
 
 void IntroState::Exit()
 {
-	/*TTF_CloseFont(m_pxfont);
-	_font = nullptr;*/
+	
 }
+#pragma endregion

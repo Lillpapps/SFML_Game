@@ -1,6 +1,6 @@
 #include "Game.h"
 
-
+#pragma region Base
 Game::Game()
 {
 }
@@ -9,7 +9,9 @@ Game::Game()
 Game::~Game()
 {
 }
+#pragma endregion
 
+#pragma region Publics
 void Game::Initialize()
 {
 	unsigned int ScreenCenterX = sf::VideoMode::GetDesktopMode().Width / 2;
@@ -42,7 +44,9 @@ void Game::Cleanup()
 	delete m_pxWindow;
 	delete m_pxGameStateManager;
 }
+#pragma endregion
 
+#pragma region Privates
 void Game::CheckForEvents()
 {
 	sf::Event evt;
@@ -58,3 +62,4 @@ void Game::CheckForEvents()
 		}
 	}
 }
+#pragma endregion
