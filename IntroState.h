@@ -22,4 +22,4 @@ private:
 	float			m_introCurrentTime;
 };
 
-#endif INTRO_STATE_H
+#endif

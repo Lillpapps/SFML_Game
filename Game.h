@@ -21,4 +21,4 @@ void				CheckForEvents();
 
 };
 
-#endif GAME_H
+#endif

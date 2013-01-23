@@ -20,4 +20,4 @@ private:
 	sf::String		m_String;
 };
 
-#endif GAME_PLAY_STATE_H
+#endif

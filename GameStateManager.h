@@ -25,4 +25,4 @@ private:
 	GameState*				m_nextState;
 };
 
-#endif GAME_STATE_MANAGER_H
+#endif

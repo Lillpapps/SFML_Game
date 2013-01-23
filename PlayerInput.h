@@ -1,13 +1,13 @@
-#pragma once
+#ifndef PLAYER_INPUT_H
+#define PLAYER_INPUT_H
+
 #include "Player.h"
-#include "Missile.h"
 
 class PlayerInput
 {
 private:
-sf::RenderWindow*		m_renderWindow;
-Player*					m_player;
-Missile*				m_missile;
+sf::RenderWindow*		m_pxWindow;
+Player*					m_pxplayer;
 bool					IsKeyDown(sf::Key::Code key);
 
 public:
@@ -18,3 +18,4 @@ void					Update();
 void					Cleanup();
 };
 
+#endif

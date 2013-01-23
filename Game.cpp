@@ -41,8 +41,17 @@ void Game::Update()
 
 void Game::Cleanup()
 {
-	delete m_pxWindow;
-	delete m_pxGameStateManager;
+	if (m_pxWindow != nullptr)
+	{
+		delete m_pxWindow;
+		m_pxWindow = NULL;
+	}
+
+	if (m_pxGameStateManager != nullptr)
+	{
+		delete m_pxGameStateManager;
+		m_pxWindow = NULL;
+	}
 }
 #pragma endregion
 

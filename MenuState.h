@@ -20,4 +20,4 @@ private:
 	sf::String		m_String;
 };
 
-#endif MENU_STATE_H
+#endif

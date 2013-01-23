@@ -25,4 +25,4 @@ private:
 
 };
 
-#endif GAME_STATE_H
+#endif
