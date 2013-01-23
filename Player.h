@@ -7,8 +7,12 @@ class Player
 {
 private:
 sf::RenderWindow*		m_pxWindow;
-sf::Image*				m_pxplayerImage;
-sf::Sprite*				m_pxplayerSprite;
+sf::Image*				m_pxPlayerImage;
+sf::Sprite*				m_pxPlayerSprite;
+unsigned int			m_uScreenHeight;
+unsigned int			m_uScreenWidth;
+unsigned int			m_uSpriteHeight;
+unsigned int			m_uSpriteWidth;
 
 public:
 					Player();

@@ -15,7 +15,7 @@ PlayerInput::~PlayerInput()
 void PlayerInput::Initialize(sf::RenderWindow* window, Player* player)
 {
 	m_pxWindow = window;
-	m_pxplayer = player;
+	m_pxPlayer = player;
 }
 
 void PlayerInput::Update()
@@ -42,7 +42,7 @@ void PlayerInput::Update()
 	{
 	}
 
-	m_pxplayer->Move(xDir, yDir);
+	m_pxPlayer->Move(xDir, yDir);
 }
 
 void PlayerInput::Cleanup()

@@ -7,7 +7,7 @@ class PlayerInput
 {
 private:
 sf::RenderWindow*		m_pxWindow;
-Player*					m_pxplayer;
+Player*					m_pxPlayer;
 bool					IsKeyDown(sf::Key::Code key);
 
 public:
