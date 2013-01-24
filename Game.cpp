@@ -18,10 +18,10 @@ void Game::Initialize()
 	m_pxWindow = new sf::RenderWindow(sf::VideoMode::GetMode(2), "SFML Window");
 	m_pxWindow->SetPosition(ScreenCenterX - m_pxWindow->GetWidth() / 2, 0);
 	m_pxGameStateManager = new GameStateManager;
-	m_pxGameStateManager->AddState(new IntroState(m_pxGameStateManager));
-	m_pxGameStateManager->AddState(new IngameMenuState(m_pxGameStateManager));
-	m_pxGameStateManager->AddState(new StartMenuState(m_pxGameStateManager));
-	m_pxGameStateManager->AddState(new GamePlayState(m_pxGameStateManager));
+	m_pxGameStateManager->AddState(new IntroState(m_pxGameStateManager, m_pxWindow));
+	m_pxGameStateManager->AddState(new IngameMenuState(m_pxGameStateManager, m_pxWindow));
+	m_pxGameStateManager->AddState(new StartMenuState(m_pxGameStateManager, m_pxWindow));
+	m_pxGameStateManager->AddState(new GamePlayState(m_pxGameStateManager, m_pxWindow));
 
 	m_pxGameStateManager->ChangeTo("IntroState");
 }
@@ -35,7 +35,7 @@ void Game::Update()
 		m_pxGameStateManager->Update(m_pxWindow->GetFrameTime());
 		
 		m_pxWindow->Clear();		
-		m_pxGameStateManager->Render(m_pxWindow);
+		m_pxGameStateManager->Render();
 		m_pxWindow->Display();
 	}
 }
@@ -68,7 +68,7 @@ void Game::CheckForEvents()
 		}
 		if ((evt.Type == sf::Event::KeyPressed) && (evt.Key.Code == sf::Key::Escape))
 		{
-			m_pxWindow->Close();
+			
 		}
 	}
 }

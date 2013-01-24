@@ -1,9 +1,10 @@
 #include "IntroState.h"
 
 #pragma region Base
-IntroState::IntroState(GameStateManager* manager):
+IntroState::IntroState(GameStateManager* manager, sf::RenderWindow* target):
 GameState(manager, "IntroState")
 {
+	m_pxWindow = target;
 	m_introDuration = 5.0f;
 	m_introCurrentTime = 0.0f;
 }
@@ -23,23 +24,21 @@ void IntroState::Update(float delta)
 		manager->ChangeTo("StartMenuState");
 	}
 
-	/*if ((evt->Type == sf::Event::KeyPressed) && (evt->Key.Code == sf::Key::Escape) )
+	if (m_pxWindow->GetInput().IsKeyDown(sf::Key::Space))
 	{
-		manager->ChangeTo("MenuState");
-	}*/
-
-	// HANDLE INPUT CLASS
+		manager->ChangeTo("StartMenuState");
+	}
 }
 
-void IntroState::Draw(sf::RenderWindow* target)
+void IntroState::Draw()
 {
-	target->Draw(m_String);
+	m_pxWindow->Draw(m_String);
 }
 
 void IntroState::Enter()
 {
 	m_Font.LoadFromFile("arial.ttf", 30);
-	m_String.SetText("State");
+	m_String.SetText("Intro State");
 	m_String.SetFont(m_Font);
 	m_String.SetSize(50);
 	m_String.SetColor(sf::Color(255,255,255));

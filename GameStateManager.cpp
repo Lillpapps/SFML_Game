@@ -51,9 +51,9 @@ void GameStateManager::Update(float delta)
 		m_currentState->Update(delta);
 }
 
-void GameStateManager::Render(sf::RenderWindow* target)
+void GameStateManager::Render()
 {
 	if ( m_currentState )
-		m_currentState->Draw(target);
+		m_currentState->Draw();
 }
 #pragma endregion

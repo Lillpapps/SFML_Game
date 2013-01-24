@@ -17,7 +17,7 @@ public:
 	void ChangeTo(const std::string& state);
 
 	void Update(float delta);
-	void Render(sf::RenderWindow* target);
+	void Render();
 
 private:
 	std::vector<GameState*>	m_states;

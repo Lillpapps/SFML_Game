@@ -6,18 +6,19 @@
 class StartMenuState : public GameState
 {
 public:
-	StartMenuState(GameStateManager* manager);
+	StartMenuState(GameStateManager* manager, sf::RenderWindow* target);
 	~StartMenuState();
 
 	void Update(float delta);
-	void Draw(sf::RenderWindow* target);
+	void Draw();
 
 	void Enter();
 	void Exit();
 
 	private:
-	sf::Font		m_Font;
-	sf::String		m_String;
+	sf::RenderWindow*	m_pxWindow;
+	sf::Font			m_Font;
+	sf::String			m_String;
 };
 
 #endif

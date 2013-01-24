@@ -19,7 +19,6 @@ private:
 sf::RenderWindow*	m_pxWindow;
 GameStateManager*	m_pxGameStateManager;
 void				CheckForEvents();
-
 };
 
 #endif

@@ -3,7 +3,6 @@
 
 int main()
 {
-	std::cout << "Lasse" << std::endl;
 	Game game;
 	game.Initialize();
 	game.Update();

@@ -1,30 +1,37 @@
 #include "GamePlayState.h"
 
 #pragma region Base
-GamePlayState::GamePlayState(GameStateManager* manager):
+GamePlayState::GamePlayState(GameStateManager* manager, sf::RenderWindow* target):
 GameState(manager, "GamePlayState")
 {
+	m_pxWindow = target;
 }
 
 GamePlayState::~GamePlayState()
 {
+	
 }
 #pragma endregion
 
 #pragma region Publics
 void GamePlayState::Update(float delta)
 {
-	/*if ( is_keydown_first(SDLK_ESCAPE) )
+	/*if (m_pxWindow->GetInput().IsKeyDown(sf::Key::Space))
 	{
-		manager->ChangeTo("MenuState");
+		manager->ChangeTo("GamePlayState");
 	}*/
+
+	if (m_pxWindow->GetInput().IsKeyDown(sf::Key::Escape))
+	{
+		manager->ChangeTo("IngameMenuState");
+	}
 
 	// HANDLE INPUT CLASS
 }
 
-void GamePlayState::Draw(sf::RenderWindow* target)
+void GamePlayState::Draw()
 {
-	target->Draw(m_String);
+	m_pxWindow->Draw(m_String);
 }
 
 void GamePlayState::Enter()

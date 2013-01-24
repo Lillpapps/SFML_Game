@@ -6,18 +6,19 @@
 class GamePlayState : public GameState
 {
 public:
-	GamePlayState(GameStateManager* manager);
+	GamePlayState(GameStateManager* manager, sf::RenderWindow* target);
 	~GamePlayState();
 
 	void Update(float delta);
-	void Draw(sf::RenderWindow* target);
+	void Draw();
 
 	void Enter();
 	void Exit();
 
 private:
-	sf::Font		m_Font;
-	sf::String		m_String;
+	sf::RenderWindow*	m_pxWindow;
+	sf::Font			m_Font;
+	sf::String			m_String;
 };
 
 #endif

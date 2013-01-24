@@ -1,9 +1,10 @@
 #include "StartMenuState.h"
 
 #pragma region Base
-StartMenuState::StartMenuState(GameStateManager* manager):
+StartMenuState::StartMenuState(GameStateManager* manager, sf::RenderWindow* target):
 GameState(manager, "StartMenuState")
 {
+	m_pxWindow = target;
 }
 
 
@@ -15,22 +16,22 @@ StartMenuState::~StartMenuState()
 #pragma region Publics
 void StartMenuState::Update(float delta)
 {
-	/*if ( is_keydown_first(SDLK_p) )
+	if (m_pxWindow->GetInput().IsKeyDown(sf::Key::Space))
 	{
-		manager->change_to("GamePlayState");
+		manager->ChangeTo("GamePlayState");
 	}
 
-	if ( is_keydown_first(SDLK_ESCAPE) )
+	/*if (m_pxWindow->GetInput().IsKeyDown(sf::Key::Escape))
 	{
-		keep_playing() = false;
+		manager->ChangeTo("IngameMenuState");
 	}*/
 
 	// HANDLE INPUT CLASS
 }
 
-void StartMenuState::Draw(sf::RenderWindow* target)
+void StartMenuState::Draw()
 {
-	target->Draw(m_String);
+	m_pxWindow->Draw(m_String);
 }
 
 void StartMenuState::Enter()

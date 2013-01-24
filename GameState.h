@@ -12,7 +12,7 @@ public:
 	const std::string& name() const { return m_name; }
 
 	virtual void Update(float delta) = 0;
-	virtual void Draw(sf::RenderWindow* target) = 0;
+	virtual void Draw() = 0;
 
 	virtual void Enter() {}
 	virtual void Exit() {}
