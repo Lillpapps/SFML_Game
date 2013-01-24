@@ -72,9 +72,10 @@
     <ClCompile Include="GameStateManager.cpp" />
     <ClCompile Include="IntroState.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="IngameMenuState.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerInput.cpp" />
+    <ClCompile Include="StartMenuState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -82,9 +83,10 @@
     <ClInclude Include="GameState.h" />
     <ClInclude Include="GameStateManager.h" />
     <ClInclude Include="IntroState.h" />
-    <ClInclude Include="MenuState.h" />
+    <ClInclude Include="IngameMenuState.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerInput.h" />
+    <ClInclude Include="StartMenuState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

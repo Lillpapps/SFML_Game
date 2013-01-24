@@ -2,8 +2,9 @@
 #define GAME_H
 
 #include "IntroState.h"
-#include "MenuState.h"
+#include "IngameMenuState.h"
 #include "GamePlayState.h"
+#include "StartMenuState.h"
 
 class Game
 {

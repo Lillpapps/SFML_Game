@@ -1,13 +1,13 @@
-#ifndef MENU_STATE_H
-#define MENU_STATE_H
+#ifndef START_MENU_STATE_H
+#define START_MENU_STATE_H
 
 #include "GameState.h"
 
-class MenuState : public GameState
+class StartMenuState : public GameState
 {
 public:
-	MenuState(GameStateManager* manager);
-	~MenuState();
+	StartMenuState(GameStateManager* manager);
+	~StartMenuState();
 
 	void Update(float delta);
 	void Draw(sf::RenderWindow* target);
@@ -15,7 +15,7 @@ public:
 	void Enter();
 	void Exit();
 
-private:
+	private:
 	sf::Font		m_Font;
 	sf::String		m_String;
 };

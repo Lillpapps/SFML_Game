@@ -1,19 +1,19 @@
-#include "MenuState.h"
+#include "IngameMenuState.h"
 
 #pragma region Base
-MenuState::MenuState(GameStateManager* manager):
-GameState(manager, "MenuState")
+IngameMenuState::IngameMenuState(GameStateManager* manager):
+GameState(manager, "IngameMenuState")
 {
 
 }
 
-MenuState::~MenuState()
+IngameMenuState::~IngameMenuState()
 {
 }
 #pragma endregion
 
 #pragma region Publics
-void MenuState::Update(float delta)
+void IngameMenuState::Update(float delta)
 {
 	/*if ( is_keydown_first(SDLK_p) )
 	{
@@ -28,22 +28,22 @@ void MenuState::Update(float delta)
 	// HANDLE INPUT CLASS
 }
 
-void MenuState::Draw(sf::RenderWindow* target)
+void IngameMenuState::Draw(sf::RenderWindow* target)
 {
 	target->Draw(m_String);
 }
 
-void MenuState::Enter()
+void IngameMenuState::Enter()
 {
 	m_Font.LoadFromFile("arial.ttf", 30);
-	m_String.SetText("Menu State");
+	m_String.SetText("Ingame Menu State");
 	m_String.SetFont(m_Font);
 	m_String.SetSize(50);
 	m_String.SetColor(sf::Color(255,255,255));
 	m_String.SetPosition(500, 500);
 }
 
-void MenuState::Exit()
+void IngameMenuState::Exit()
 {
 	
 }

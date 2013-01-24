@@ -20,7 +20,7 @@ void IntroState::Update(float delta)
 
 	if ( m_introCurrentTime > m_introDuration )
 	{
-		manager->ChangeTo("MenuState");
+		manager->ChangeTo("StartMenuState");
 	}
 
 	/*if ((evt->Type == sf::Event::KeyPressed) && (evt->Key.Code == sf::Key::Escape) )

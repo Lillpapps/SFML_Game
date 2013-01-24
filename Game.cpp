@@ -19,7 +19,8 @@ void Game::Initialize()
 	m_pxWindow->SetPosition(ScreenCenterX - m_pxWindow->GetWidth() / 2, 0);
 	m_pxGameStateManager = new GameStateManager;
 	m_pxGameStateManager->AddState(new IntroState(m_pxGameStateManager));
-	m_pxGameStateManager->AddState(new MenuState(m_pxGameStateManager));
+	m_pxGameStateManager->AddState(new IngameMenuState(m_pxGameStateManager));
+	m_pxGameStateManager->AddState(new StartMenuState(m_pxGameStateManager));
 	m_pxGameStateManager->AddState(new GamePlayState(m_pxGameStateManager));
 
 	m_pxGameStateManager->ChangeTo("IntroState");
