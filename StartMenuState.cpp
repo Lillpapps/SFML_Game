@@ -36,7 +36,7 @@ void StartMenuState::Draw(sf::RenderWindow* target)
 void StartMenuState::Enter()
 {
 	m_Font.LoadFromFile("arial.ttf", 30);
-	m_String.SetText("Ingame Menu State");
+	m_String.SetText("Start Menu State");
 	m_String.SetFont(m_Font);
 	m_String.SetSize(50);
 	m_String.SetColor(sf::Color(255,255,255));
