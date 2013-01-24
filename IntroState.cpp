@@ -39,7 +39,7 @@ void IntroState::Draw(sf::RenderWindow* target)
 void IntroState::Enter()
 {
 	m_Font.LoadFromFile("arial.ttf", 30);
-	m_String.SetText("Intro State");
+	m_String.SetText("State");
 	m_String.SetFont(m_Font);
 	m_String.SetSize(50);
 	m_String.SetColor(sf::Color(255,255,255));
